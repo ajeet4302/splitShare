@@ -1,3 +1,5 @@
+const API_URL = "https://splitshare-vfh9.onrender.com";
+
 const token = localStorage.getItem("token");
 
 if (!token) {
@@ -17,8 +19,8 @@ window.onload = function () {
 async function loadGroups() {
 
     try {
-
-        const response = await fetch("http://localhost:8096/groups", {
+		const response = await fetch(API_URL + "/groups", {
+       
 
             headers: {
                 "Authorization": "Bearer " + token
@@ -92,7 +94,7 @@ async function loadExpenses() {
 
         const response = await fetch(
 
-            `http://localhost:8096/expenses/group/${groupId}`,
+            `${API_URL}/expenses/group/${groupId}`,
 
             {
 

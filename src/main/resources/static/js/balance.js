@@ -1,3 +1,4 @@
+const API_URL = "https://splitshare-vfh9.onrender.com";
 const token = localStorage.getItem("token");
 
 if (!token) {
@@ -13,7 +14,7 @@ async function loadGroups() {
     try {
 
         const response = await fetch(
-            "http://localhost:8096/groups",
+            API_URL + "/groups",
             {
                 headers: {
                     "Authorization": "Bearer " + token
@@ -75,7 +76,7 @@ async function loadBalance(){
 
         const response = await fetch(
 
-            `http://localhost:8096/expenses/balance/${groupId}`,
+            `${API_URL}/expenses/balance/${groupId}`,
 
             {
 

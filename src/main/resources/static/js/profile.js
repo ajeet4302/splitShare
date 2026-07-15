@@ -16,8 +16,7 @@ async function loadProfile() {
 
         const response = await fetch(
 
-            "http://localhost:8096/users/profile",
-
+"https://splitshare-vfh9.onrender.com/users/profile",
             {
 
                 headers: {
@@ -83,7 +82,7 @@ async function updateProfile(e) {
 
         const response = await fetch(
 
-            "http://localhost:8096/users/profile",
+            "https://splitshare-vfh9.onrender.com/users/profile",
 
             {
 

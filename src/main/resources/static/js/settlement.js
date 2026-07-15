@@ -12,8 +12,7 @@ async function loadGroups() {
 
     try {
 
-        const response = await fetch("http://localhost:8096/groups", {
-
+const response = await fetch("https://splitshare-vfh9.onrender.com/groups", {
             headers: {
                 "Authorization": "Bearer " + token
             }
@@ -72,8 +71,7 @@ async function loadMembers() {
 
         const response = await fetch(
 
-            `http://localhost:8096/groups/${groupId}/members`,
-
+`https://splitshare-vfh9.onrender.com/groups/${groupId}/members`,
             {
 
                 headers: {
@@ -135,8 +133,7 @@ async function settlePayment(e) {
 
         const response = await fetch(
 
-            "http://localhost:8096/settlements",
-
+"https://splitshare-vfh9.onrender.com/settlements",
             {
 
                 method: "POST",
