@@ -48,5 +48,15 @@ async function registerUser(event) {
         alert("Server Error");
 
     }
+	
+
+	// Logout
+	function logout() {
+
+	    localStorage.clear();
+
+	    window.location.href = "login.html";
+
+	}
 
 }

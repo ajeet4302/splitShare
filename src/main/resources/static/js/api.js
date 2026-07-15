@@ -1,1 +1,1 @@
-const BASE_URL = "http://localhost:8096";
+const BASE_URL = "https://splitshare-vfh9.onrender.com";
