@@ -1,8 +1,4 @@
-const API_URL = "http://localhost:8096";
-
-// =========================
-// Register User
-// =========================
+const API_URL = "https://splitshare-vfh9.onrender.com";
 
 document
 .getElementById("registerForm")
@@ -13,31 +9,20 @@ async function registerUser(event) {
     event.preventDefault();
 
     const user = {
-
         name: document.getElementById("name").value.trim(),
-
         email: document.getElementById("email").value.trim(),
-
         phone: document.getElementById("phone").value.trim(),
-
         password: document.getElementById("password").value.trim()
-
     };
 
     try {
 
         const response = await fetch(API_URL + "/users/register", {
-
             method: "POST",
-
             headers: {
-
                 "Content-Type": "application/json"
-
             },
-
             body: JSON.stringify(user)
-
         });
 
         if (response.ok) {
@@ -48,9 +33,7 @@ async function registerUser(event) {
 
             document.getElementById("registerForm").reset();
 
-        }
-
-        else {
+        } else {
 
             const message = await response.text();
 
@@ -58,26 +41,12 @@ async function registerUser(event) {
 
         }
 
-    }
-
-    catch (error) {
+    } catch (error) {
 
         console.log(error);
 
         alert("Server Error");
 
     }
-
-}
-
-// =========================
-// Logout
-// =========================
-
-function logout() {
-
-    localStorage.clear();
-
-    window.location.href = "login.html";
 
 }

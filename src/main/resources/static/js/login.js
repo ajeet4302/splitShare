@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8096";
+const API_URL = "https://splitshare-vfh9.onrender.com";
 
 async function login() {
 
@@ -27,10 +27,8 @@ async function login() {
             },
 
             body: JSON.stringify({
-
                 email: email,
                 password: password
-
             })
 
         });
