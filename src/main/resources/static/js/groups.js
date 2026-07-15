@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8096";
+const API_URL = "https://splitshare-vfh9.onrender.com";
 
 const token = localStorage.getItem("token");
 
