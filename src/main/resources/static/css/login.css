@@ -194,26 +194,66 @@ body{
 
 }
 
-/* Responsive */
+/* ==========================================
+   Responsive
+========================================== */
 
-@media(max-width:900px){
+@media screen and (max-width:768px){
 
-.left-panel{
+    body{
+        overflow-x:hidden;
+    }
 
-display:none;
+    .login-container{
+        flex-direction:column;
+        min-height:100vh;
+    }
 
-}
+    /* Hide left panel on mobile */
+    .left-panel{
+        display:none;
+    }
 
-.right-panel{
+    /* Right panel full width */
+    .right-panel{
+        width:100%;
+        padding:20px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
 
-width:100%;
+    /* Login Card */
+    .login-card{
+        width:100%;
+        max-width:420px;
+        padding:30px 20px;
+        border-radius:15px;
+    }
 
-}
+    .logo i{
+        font-size:45px;
+    }
 
-.login-card{
+    .logo h2{
+        font-size:28px;
+    }
 
-width:90%;
+    .form-group label{
+        font-size:15px;
+    }
 
-}
+    .form-control{
+        padding:12px;
+        font-size:16px;
+    }
 
+    .login-btn{
+        padding:14px;
+        font-size:16px;
+    }
+
+    .register-link{
+        font-size:15px;
+    }
 }

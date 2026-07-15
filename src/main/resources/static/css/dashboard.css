@@ -612,3 +612,128 @@ color:white;
     background:#DC2626;
 
 }
+/* ==========================================
+   Responsive Dashboard
+========================================== */
+
+@media screen and (max-width: 768px){
+
+    body{
+        overflow-x:hidden;
+    }
+
+    .wrapper{
+        flex-direction:column;
+    }
+
+    /* Sidebar */
+
+    .sidebar{
+        position:relative;
+        width:100%;
+        height:auto;
+        padding:20px;
+    }
+
+    .logo{
+        margin-bottom:20px;
+    }
+
+    .sidebar ul{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:10px;
+    }
+
+    .sidebar ul li{
+        margin:0;
+    }
+
+    .sidebar ul li a{
+        padding:10px 14px;
+        font-size:14px;
+    }
+
+    .logout-btn{
+        margin-top:20px;
+    }
+
+    /* Main */
+
+    .main-content{
+        margin-left:0;
+        width:100%;
+        padding:20px;
+    }
+
+    /* Topbar */
+
+    .topbar{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:20px;
+    }
+
+    .topbar h2{
+        font-size:24px;
+    }
+
+    .top-right{
+        width:100%;
+        justify-content:space-between;
+    }
+
+    .profile-box{
+        padding:8px 12px;
+    }
+
+    .avatar{
+        width:40px;
+        height:40px;
+        font-size:18px;
+    }
+
+    /* Cards */
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .cards .card{
+        padding:20px;
+    }
+
+    .cards .card h2{
+        font-size:26px;
+    }
+
+    /* Groups */
+
+    .group-grid{
+        grid-template-columns:1fr;
+    }
+
+    .group-actions{
+        flex-direction:column;
+    }
+
+    /* Tables */
+
+    .table-section{
+        overflow-x:auto;
+    }
+
+    table{
+        min-width:650px;
+    }
+
+    /* Section Header */
+
+    .section-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:15px;
+    }
+
+}

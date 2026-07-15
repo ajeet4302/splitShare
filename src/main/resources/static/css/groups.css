@@ -93,3 +93,37 @@ body{
     border-radius:10px;
 
 }
+/* ==========================================
+   Responsive Groups Page
+========================================== */
+
+@media screen and (max-width:768px){
+
+    .page-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:15px;
+        margin:20px 0;
+    }
+
+    .page-header h2{
+        font-size:26px;
+    }
+
+    .group-grid{
+        grid-template-columns:1fr;
+    }
+
+    .group-card{
+        padding:20px;
+    }
+
+    .group-actions{
+        flex-direction:column;
+    }
+
+    .group-actions button{
+        width:100%;
+    }
+
+}
