@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Expenses | SplitShare</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/expenses.css">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div>
+
+            <div class="logo">
+
+                <i class="fa-solid fa-wallet"></i>
+
+                <h2>SplitShare</h2>
+
+            </div>
+
+            <ul>
+
+                <li>
+                    <a href="dashboard.html">
+                        <i class="fa-solid fa-house"></i>
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="groups.html">
+                        <i class="fa-solid fa-users"></i>
+                        Groups
+                    </a>
+                </li>
+
+                <li class="active">
+                    <a href="expenses.html">
+                        <i class="fa-solid fa-money-bill-wave"></i>
+                        Expenses
+                    </a>
+                </li>
+
+                <li>
+                    <a href="add-expense.html">
+                        <i class="fa-solid fa-plus-circle"></i>
+                        Add Expense
+                    </a>
+                </li>
+
+                <li>
+                    <a href="balance.html">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                        Balance
+                    </a>
+                </li>
+
+                <li>
+                    <a href="settlement.html">
+                        <i class="fa-solid fa-handshake"></i>
+                        Settlement
+                    </a>
+                </li>
+
+                <li>
+                    <a href="profile.html">
+                        <i class="fa-solid fa-user"></i>
+                        Profile
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <button class="logout-btn" onclick="logout()">
+
+            Logout
+
+        </button>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <div class="page-header">
+
+            <div>
+
+                <h2>Expenses</h2>
+
+                <p>View all expenses of a selected group.</p>
+
+            </div>
+
+        </div>
+
+        <div class="expense-card">
+
+            <!-- Filter -->
+
+            <div class="filter-section">
+
+                <div class="form-group">
+
+                    <label>Select Group</label>
+
+                    <select
+                            id="groupSelect"
+                            class="form-control">
+
+                        <option value="">Select Group</option>
+
+                    </select>
+
+                </div>
+
+                <button
+                        id="loadExpenseBtn"
+                        class="btn btn-primary">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    Load Expenses
+
+                </button>
+
+            </div>
+
+            <!-- Loading -->
+
+            <div
+                    id="loading"
+                    class="spinner">
+
+                <div class="spinner-border text-primary"></div>
+
+                <p class="mt-2">Loading Expenses...</p>
+
+            </div>
+
+            <!-- Table -->
+
+            <table class="table table-hover">
+
+                <thead>
+
+                <tr>
+
+                    <th>Title</th>
+
+                    <th>Description</th>
+
+                    <th>Amount</th>
+
+                    <th>Paid By</th>
+
+                    <th>Date</th>
+
+                </tr>
+
+                </thead>
+
+                <tbody id="expenseTable">
+
+                    <tr>
+
+                        <td colspan="5" class="text-center">
+
+                            Select a group to view expenses.
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="js/expenses.js"></script>
+
+</body>
+
+</html>

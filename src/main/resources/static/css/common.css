@@ -1,0 +1,341 @@
+/* ==========================================
+   SplitWise - Common Styles
+   ========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+
+    --primary:#2563EB;
+    --primary-dark:#1D4ED8;
+
+    --success:#10B981;
+    --danger:#EF4444;
+    --warning:#F59E0B;
+
+    --sidebar:#0F172A;
+
+    --background:#F8FAFC;
+
+    --white:#FFFFFF;
+
+    --text:#1E293B;
+
+    --text-light:#64748B;
+
+    --border:#E2E8F0;
+
+    --shadow:0 8px 25px rgba(0,0,0,.08);
+
+    --radius:16px;
+
+}
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    background:var(--background);
+
+    color:var(--text);
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+img{
+
+    max-width:100%;
+
+}
+
+button{
+
+    cursor:pointer;
+
+}
+
+.container{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+}
+
+/* Buttons */
+
+.btn-primary{
+
+    background:var(--primary);
+
+    color:white;
+
+    border:none;
+
+    border-radius:10px;
+
+    padding:12px 22px;
+
+    transition:.3s;
+
+}
+
+.btn-primary:hover{
+
+    background:var(--primary-dark);
+
+}
+
+.btn-danger{
+
+    background:var(--danger);
+
+    color:white;
+
+    border:none;
+
+    border-radius:10px;
+
+    padding:12px 22px;
+
+}
+
+.btn-success{
+
+    background:var(--success);
+
+    color:white;
+
+    border:none;
+
+    border-radius:10px;
+
+    padding:12px 22px;
+
+}
+
+/* Card */
+
+.card{
+
+    background:white;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    padding:25px;
+
+}
+
+/* Inputs */
+
+.form-control{
+
+    width:100%;
+
+    padding:12px;
+
+    border:1px solid var(--border);
+
+    border-radius:10px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+.form-control:focus{
+
+    border-color:var(--primary);
+
+}
+
+/* Table */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+th{
+
+    background:#F1F5F9;
+
+    padding:14px;
+
+}
+
+td{
+
+    padding:14px;
+
+    border-bottom:1px solid #eee;
+
+}
+/* ==========================================
+   Dashboard Layout
+========================================== */
+
+.wrapper{
+
+    display:flex;
+
+    min-height:100vh;
+
+}
+
+.sidebar{
+
+    width:260px;
+
+    background:var(--sidebar);
+
+    color:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    position:fixed;
+
+    left:0;
+
+    top:0;
+
+    height:100vh;
+
+    padding:25px;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:35px;
+
+}
+
+.logo i{
+
+    font-size:28px;
+
+    color:#3B82F6;
+
+}
+
+.logo h2{
+
+    color:white;
+
+    font-size:24px;
+
+}
+
+.sidebar ul{
+
+    padding:0;
+
+}
+
+.sidebar ul li{
+
+    margin:10px 0;
+
+}
+
+.sidebar ul li a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#CBD5E1;
+
+    padding:12px 15px;
+
+    border-radius:10px;
+
+    transition:.3s;
+
+}
+
+.sidebar ul li.active a,
+
+.sidebar ul li a:hover{
+
+    background:#1E293B;
+
+    color:white;
+
+}
+
+.main-content{
+
+    margin-left:260px;
+
+    width:calc(100% - 260px);
+
+    padding:35px;
+
+}
+
+.logout-btn{
+
+    width:100%;
+
+    padding:12px;
+
+    background:#EF4444;
+
+    color:white;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+}

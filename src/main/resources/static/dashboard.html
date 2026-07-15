@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>SplitWise Dashboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-wallet"></i>
+            <h2>SplitWise</h2>
+        </div>
+
+        <ul>
+
+            <li class="active">
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="groups.html">
+                    <i class="fa-solid fa-users"></i>
+                    Groups
+                </a>
+            </li>
+
+            <li>
+                <a href="add-expense.html">
+                    <i class="fa-solid fa-money-bill-wave"></i>
+                    Expenses
+                </a>
+            </li>
+
+            <li>
+                <a href="balance.html">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                    Balance
+                </a>
+            </li>
+
+            <li>
+                <a href="settlement.html">
+                    <i class="fa-solid fa-handshake"></i>
+                    Settlement
+                </a>
+            </li>
+
+            <li>
+                <a href="profile.html">
+                    <i class="fa-solid fa-user"></i>
+                    Profile
+                </a>
+            </li>
+
+        </ul>
+
+        <button class="logout-btn" onclick="logout()">
+            Logout
+        </button>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <!-- Topbar -->
+
+        <div class="topbar">
+
+            <div>
+
+                <h2>Dashboard</h2>
+
+                <p class="welcome-text">
+                    Welcome back,
+                    <span id="username">Loading...</span> 👋
+                </p>
+
+            </div>
+
+            <div class="top-right">
+
+				<button
+				    class="notification-btn"
+				    onclick="showNotifications()">
+
+				    <i class="fa-solid fa-bell"></i>
+
+				</button>
+
+                <div class="profile-box">
+
+                    <div class="avatar">
+                        A
+                    </div>
+
+                    <div>
+
+                        <h5 id="topUserName">Ajeet</h5>
+
+                        <small>Expense Manager</small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Dashboard Cards -->
+
+        <div class="cards">
+
+            <div class="card">
+
+                <i class="fa-solid fa-users"></i>
+
+                <h5>Total Groups</h5>
+
+                <h2 id="groupCount">0</h2>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-money-bill-wave"></i>
+
+                <h5>Total Expenses</h5>
+
+                <h2 id="expenseCount">0</h2>
+
+            </div>
+
+			<div class="card">
+
+			    <i class="fa-solid fa-indian-rupee-sign"></i>
+
+			    <h5>Total Amount Spent</h5>
+
+			    <h2 id="balanceAmount">₹0</h2>
+
+			</div>
+
+        </div>
+
+        <!-- Groups -->
+
+        <div class="groups-section">
+
+            <div class="section-header">
+
+                <h3>My Groups</h3>
+
+                <button class="btn-primary"
+                        onclick="window.location='create-group.html'">
+
+                    + Create Group
+
+                </button>
+
+            </div>
+
+            <div id="groupContainer" class="group-grid">
+
+            </div>
+
+        </div>
+
+        <!-- Recent Expenses -->
+
+        <div class="table-section">
+
+            <div class="table-header">
+
+                <h3>Recent Expenses</h3>
+
+				<button
+				        class="btn-primary"
+				        onclick="window.location='add-expense.html'">
+
+				    + Add Expense
+
+				</button>
+
+            </div>
+
+            <table class="table table-hover">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Title</th>
+
+                        <th>Paid By</th>
+
+                        <th>Amount</th>
+
+                        <th>Date</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="expenseTable">
+
+                    <tr>
+
+                        <td colspan="4" class="text-center">
+
+                            No Expenses Found
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

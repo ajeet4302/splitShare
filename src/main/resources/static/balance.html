@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Balance | SplitShare</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/balance.css">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div>
+
+            <div class="logo">
+
+                <i class="fa-solid fa-wallet"></i>
+
+                <h2>SplitShare</h2>
+
+            </div>
+
+            <ul>
+
+                <li>
+                    <a href="dashboard.html">
+                        <i class="fa-solid fa-house"></i>
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="groups.html">
+                        <i class="fa-solid fa-users"></i>
+                        Groups
+                    </a>
+                </li>
+
+                <li>
+                    <a href="add-expense.html">
+                        <i class="fa-solid fa-money-bill-wave"></i>
+                        Add Expense
+                    </a>
+                </li>
+
+                <li class="active">
+                    <a href="balance.html">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                        Balance
+                    </a>
+                </li>
+
+                <li>
+                    <a href="settlement.html">
+                        <i class="fa-solid fa-handshake"></i>
+                        Settlement
+                    </a>
+                </li>
+
+                <li>
+                    <a href="profile.html">
+                        <i class="fa-solid fa-user"></i>
+                        Profile
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <button class="logout-btn" onclick="logout()">
+            Logout
+        </button>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="main-content">
+
+        <div class="page-header">
+
+            <h2>Group Balance</h2>
+
+            <p>Check everyone's balance in a group.</p>
+
+        </div>
+
+        <div class="balance-card">
+
+            <div class="row mb-4">
+
+                <div class="col-md-8">
+
+                    <select
+                            id="groupSelect"
+                            class="form-control">
+
+                        <option value="">Select Group</option>
+
+                    </select>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <button
+                            id="loadBalanceBtn"
+                            class="btn btn-primary w-100">
+
+                        Load Balance
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <table class="table table-hover">
+
+                <thead>
+
+                <tr>
+
+                    <th>Member</th>
+
+                    <th>Paid</th>
+
+                    <th>Owes</th>
+
+                    <th>Balance</th>
+
+                </tr>
+
+                </thead>
+
+                <tbody id="balanceTable">
+
+                <tr>
+
+                    <td colspan="4" class="text-center">
+
+                        Select a group to view balances.
+
+                    </td>
+
+                </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="js/balance.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+.page-header{
+
+    margin-bottom:25px;
+
+}
+
+.page-header h2{
+
+    font-weight:700;
+
+    color:#2c3e50;
+
+}
+
+.page-header p{
+
+    color:#777;
+
+}
+
+.register-card{
+
+    background:#fff;
+
+    max-width:650px;
+
+    padding:35px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+.form-label{
+
+    font-weight:600;
+
+    color:#2c3e50;
+
+}
+
+.form-control{
+
+    padding:12px;
+
+    border-radius:10px;
+
+    border:1px solid #dcdcdc;
+
+    transition:.3s;
+
+}
+
+.form-control:focus{
+
+    border-color:#2563EB;
+
+    box-shadow:0 0 8px rgba(37,99,235,.2);
+
+}
+
+.btn-primary{
+
+    padding:12px 30px;
+
+    border-radius:10px;
+
+    font-weight:600;
+
+}
+
+.btn-primary i{
+
+    margin-right:8px;
+
+}

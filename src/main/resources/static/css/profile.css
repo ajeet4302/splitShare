@@ -1,0 +1,57 @@
+.page-header{
+
+    margin-bottom:25px;
+
+}
+
+.page-header h2{
+
+    font-weight:700;
+
+    color:#2c3e50;
+
+}
+
+.page-header p{
+
+    color:#777;
+
+}
+
+.profile-card{
+
+    background:#fff;
+
+    max-width:650px;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+.form-label{
+
+    font-weight:600;
+
+}
+
+.form-control{
+
+    padding:12px;
+
+    border-radius:10px;
+
+}
+
+.btn-primary{
+
+    padding:12px 30px;
+
+    border-radius:10px;
+
+    font-weight:600;
+
+}

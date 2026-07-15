@@ -1,0 +1,194 @@
+/* ==========================================
+   Add Expense Page
+========================================== */
+
+.page-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.page-header h2{
+    font-size:32px;
+    font-weight:700;
+    color:#0F172A;
+    margin-bottom:5px;
+}
+
+.page-header p{
+    color:#64748B;
+    font-size:15px;
+}
+
+.expense-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    animation:fadeIn .5s ease;
+
+}
+
+.form-label{
+
+    font-weight:600;
+
+    margin-bottom:8px;
+
+    color:#334155;
+
+}
+
+.form-control{
+
+    height:52px;
+
+    border-radius:12px;
+
+    border:1px solid #CBD5E1;
+
+    transition:.3s;
+
+    font-size:15px;
+
+}
+
+.form-control:focus{
+
+    border-color:#2563EB;
+
+    box-shadow:0 0 0 .2rem rgba(37,99,235,.15);
+
+}
+
+textarea.form-control{
+
+    height:140px;
+
+    resize:none;
+
+    padding-top:15px;
+
+}
+
+select.form-control{
+
+    cursor:pointer;
+
+}
+
+.button-group{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:25px;
+
+}
+
+.button-group .btn{
+
+    padding:12px 28px;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.button-group .btn-primary{
+
+    background:#2563EB;
+
+    border:none;
+
+}
+
+.button-group .btn-primary:hover{
+
+    background:#1D4ED8;
+
+    transform:translateY(-2px);
+
+}
+
+.button-group .btn-secondary{
+
+    background:#E2E8F0;
+
+    color:#1E293B;
+
+    border:none;
+
+}
+
+.button-group .btn-secondary:hover{
+
+    background:#CBD5E1;
+
+    transform:translateY(-2px);
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .page-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:10px;
+
+    }
+
+    .expense-card{
+
+        padding:20px;
+
+    }
+
+    .button-group{
+
+        flex-direction:column;
+
+    }
+
+    .button-group .btn{
+
+        width:100%;
+
+    }
+
+}
